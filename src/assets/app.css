@@ -14,3 +14,9 @@
         @apply m-16 p-16 bg-white        
     }
 }
+
+body {
+    background: gainsboro;
+    background-image: radial-gradient(rgb(189, 189, 189) 1px, transparent 0);
+    background-size: 12px 12px;
+  }
