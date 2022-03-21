@@ -7,10 +7,10 @@
   import OrderOverview from "../lib/orderOverview.svelte";
   import Finished from "../lib/finished.svelte";
   import { fade } from "svelte/transition";
+  import { orderStore } from "../stores/order.store";
   
   let currentStep = 1;
-  let selectedBeverage, selectedMeal = null;
-  let orders = [];
+  let selectedBeverage, selectedMeal = null;  
   const stepTransition = { duration: 800};
 
   function setBeverage(event)
@@ -28,13 +28,12 @@
   function finalizeOrder()
   {
       currentStep = 4;
-      orders.push({ beverage: selectedBeverage, meal: selectedMeal, orderedAt: new Date()});
+      orderStore.addOrder({ beverage: selectedBeverage, meal: selectedMeal, orderedAt: new Date()});
   }
 </script>
 
-
    <div class="flex flex-col xl:flex-row mt-5 ">
-      <Progress bind:step={currentStep} />
+        <Progress bind:step={currentStep} />
       
         {#if currentStep === 1}
           <div class="stepbox stepbox-grid" in:fade={stepTransition} >

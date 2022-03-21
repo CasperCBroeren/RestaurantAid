@@ -1,4 +1,5 @@
 <script>
+  import { orderStore } from "../stores/order.store";
   export let items = [{ name: 'create', route: '/'}, { name: 'orders', route: '/orders'}];
   </script>
   
@@ -8,7 +9,7 @@
       <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_cbr1qxxq.json"  
             background="transparent"  
             speed="1"  
-            class="w-16"            
+            class="w-16"           
             autoplay>
         </lottie-player>
       <h1 class="normal-case text-xl">Restaurant aid 2.01</h1>
@@ -17,7 +18,12 @@
       <ul class="menu menu-horizontal p-0">
         {#each items as item, i}
           <li>
-            <a class="uppercase" href={item.route}>{item.name}</a>
+            
+            <a class="uppercase" href={item.route}>{item.name}
+              {#if item.name== "orders"}
+                <div class="badge">{$orderStore.length}</div>
+              {/if}
+            </a>
           </li>
         {/each}
     </ul>

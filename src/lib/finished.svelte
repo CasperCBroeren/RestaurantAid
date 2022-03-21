@@ -1,6 +1,5 @@
 <script>
-    import '@lottiefiles/lottie-player'
-
+    
 </script>
 <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_Eh4ZBX.json"  
             background="transparent"  
