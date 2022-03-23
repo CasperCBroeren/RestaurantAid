@@ -22,7 +22,7 @@
 			<p>{meal.description}</p>
 			<div class="stat-title">Price {meal.price.formated}</div>
 			<div class="card-actions justify-end">
-				<button class="btn btn-primary" on:click={(p) => selectMeal(meal)}>Select</button>
+				<button class="btn btn-primary" on:click={() => selectMeal(meal)}>Select</button>
 			</div>
 		</div>
 	</div>

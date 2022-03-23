@@ -19,7 +19,7 @@
 			<p>{beverage.description}</p>
 			<div class="stat-title">Price {beverage.price.formated}</div>
 			<div class="card-actions justify-end">
-				<button class="btn btn-primary" on:click={(e) => selectBeverage(beverage)}>Select</button>
+				<button class="btn btn-primary" on:click={() => selectBeverage(beverage)}>Select</button>
 			</div>
 		</div>
 	</div>
