@@ -1,14 +1,13 @@
-
 export class Price {
-    constructor(value) {
-        this.value = value;
-    }
+	constructor(value) {
+		this.value = value;
+	}
 
-    get formated() {
-        return `€ ${this.value.toFixed(2)}`;
-    }
+	get formated() {
+		return `€ ${this.value.toFixed(2)}`;
+	}
 
-    add(other) {
-        return new Price(this.value + other.value);
-    }
+	add(other) {
+		return new Price(this.value + other.value);
+	}
 }
