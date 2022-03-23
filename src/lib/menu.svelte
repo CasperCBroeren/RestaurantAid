@@ -1,6 +1,7 @@
 <script>
   import { orderStore } from "../stores/order.store";
-  export let items = [{ name: 'create', route: '/'}, { name: 'orders', route: '/orders'}];
+  import { page } from '$app/stores';
+  export let items = [{ name: 'create', route: '/'}, { name: 'orders', route: '/orders'},  {name: 'about', route: '/about'}];
   </script>
   
   <div class="navbar bg-base-100 rounded">
@@ -17,9 +18,8 @@
     <ul class="flex-none">
       <ul class="menu menu-horizontal p-0">
         {#each items as item, i}
-          <li>
-            
-            <a class="uppercase" href={item.route}>{item.name}
+          <li>            
+            <a class="uppercase" class:active="{$page.url.pathname===item.route}" href={item.route}>{item.name}
               {#if item.name== "orders"}
                 <div class="badge">{$orderStore.length}</div>
               {/if}

@@ -1,5 +1,5 @@
 <script>
-     import {createEventDispatcher } from 'svelte';
+    import {createEventDispatcher } from 'svelte';
 
     const dispatch = createEventDispatcher();
     export let meal = null;
@@ -27,7 +27,7 @@
     
   </div>
 
-  <div class="w-2/3 pt-32 lg:p-32">
+  <div class="w-2/3 pt-32 2xl:p-32">
     <h3 class="text-4xl mb-4">Almost there!</h3>
     <p class="">
       Your meal order is almost complete. Please review the order and press purchase

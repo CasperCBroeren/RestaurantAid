@@ -1,14 +1,15 @@
 <script>
-  import "../assets/app.css";  
-  import { beverages, meals } from "../assets/data"; 
-  import Progress from "../lib/progress.svelte";
-  import ChooseBeverage from "../lib/chooseBeverage.svelte";
-  import ChooseMeal from "../lib/chooseMeal.svelte";
-  import OrderOverview from "../lib/orderOverview.svelte";
-  import Finished from "../lib/finished.svelte";
-  import { fade } from "svelte/transition";
-  import { orderStore } from "../stores/order.store";
-  
+  import '../assets/app.css';  
+  import { beverages, meals } from '../assets/data'; 
+  import Progress from '../lib/progress.svelte';
+  import ChooseBeverage from '../lib/chooseBeverage.svelte';
+  import ChooseMeal from '../lib/chooseMeal.svelte';
+  import OrderOverview from '../lib/orderOverview.svelte';
+  import Finished from '../lib/finished.svelte';
+  import { fade } from 'svelte/transition';
+  import { orderStore } from '../stores/order.store';
+  import { Order } from '../models/order';
+
   let currentStep = 1;
   let selectedBeverage, selectedMeal = null;  
   const stepTransition = { duration: 800};
@@ -28,7 +29,14 @@
   function finalizeOrder()
   {
       currentStep = 4;
-      orderStore.addOrder({ beverage: selectedBeverage, meal: selectedMeal, orderedAt: new Date()});
+      orderStore.addOrder(new Order(selectedBeverage, selectedMeal));
+  }
+
+  function reset()
+  {
+    currentStep = 1;
+    selectedBeverage = null;
+    selectedMeal = null;
   }
 </script>
 
@@ -52,7 +60,7 @@
         {/if}
         {#if currentStep === 4 }
           <div class="stepbox" in:fade={stepTransition} >
-            <Finished  />
+            <Finished  on:reset={reset} />
           </div>
         {/if}    
   </div>

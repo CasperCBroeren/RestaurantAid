@@ -7,7 +7,7 @@
         @apply flex xl:w-5/6 flex-grow mt-10 xl:mt-0 xl:ml-10 bg-base-100 rounded-lg shadow-xl;
     }
     .stepbox-grid {
-        @apply grid grid-cols-2 xl:grid-cols-4
+        @apply grid grid-cols-2 2xl:grid-cols-4
     }
 
     .note {
@@ -15,8 +15,16 @@
     }
 }
 
-body {
+body, html {    
+    height: 100%;
+    width: 100%;
+}
+
+.bg {
+    
     background: gainsboro;
     background-image: radial-gradient(rgb(189, 189, 189) 1px, transparent 0);
     background-size: 12px 12px;
-  }
+
+    height: 100%;  
+}

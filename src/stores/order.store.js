@@ -8,6 +8,7 @@ function createOrders()
         subscribe,
         addOrder: (order) => update(o => {
             o.push(order);
+            o.sort((a, b) => a.orderedAt < b.orderedAt ? 1 : -1);
             return o;
         }),        
         reset: () => set([])
