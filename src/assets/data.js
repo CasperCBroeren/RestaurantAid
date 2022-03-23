@@ -1,4 +1,5 @@
-import { Beverage, Meal } from '../models/order';
+import { Meal } from "../models/Meal";
+import { Beverage } from "../models/Beverage";
 
 export const beverages = [
   new Beverage('Blue berry Bizar',  4.34,  '/drinks/blueberryDrink.jpg', 'This bizar berry concocture is not for the faint harted. Drink and experience blue berries as you have never drank before.' ),

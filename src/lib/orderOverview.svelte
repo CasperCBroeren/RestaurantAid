@@ -16,13 +16,13 @@
     <div>
       <div class="stat-title">Beverage</div>
       <div class="text-2xl font-bold ">{beverage.name}</div>
-      <div class="stat-desc">Price &euro; {beverage.price}</div>
+      <div class="stat-desc">Price {beverage.price.formated}</div>
     </div>
     <div class="divider">and</div>
     <div>
       <div class="stat-title">Meal</div>
       <div class="text-2xl font-bold">{meal.name}</div>
-      <div class="stat-desc">Price &euro; {meal.price}</div>
+      <div class="stat-desc">Price {meal.price.formated}</div>
     </div>
     
   </div>
@@ -34,7 +34,7 @@
     </p>
       <div class="text-xl mt-4">
         Total: 
-        &euro; {meal.price + beverage.price}
+        {meal.price.add(beverage.price).formated}
       
       <button on:click={order} class="btn btn-primary btm-lg mt-4 lg:ml-4">Purchase</button>
       </div>

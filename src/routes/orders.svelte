@@ -1,6 +1,5 @@
 <script>
   import { orderStore } from '../stores/order.store';
-  import {Order} from '../models/order';
   import  moment  from 'moment';
 </script>
 <div class="mt-5 p-10 bg-base-100 rounded-lg shadow-xl ">
@@ -18,12 +17,12 @@
           </thead>
           <tbody>
             {#each $orderStore as order}
-            <tr>
-              <th>{order.beverage.name}</th>
-              <td>{order.meal.name}</td>
-              <td>{moment(order.orderedAt).format("MMMM Do YYYY, HH:mm")}</td>
-              <td>&euro; {order.beverage.price + order.meal.price}</td>
-            </tr>
+              <tr>
+                <th>{order.beverage.name}</th>
+                <td>{order.meal.name}</td>
+                <td>{moment(order.orderedAt).format("MMMM Do YYYY, HH:mm")}</td>
+                <td>{order.cost.formated}</td>
+              </tr>
             {/each}
           </tbody>
         </table>
