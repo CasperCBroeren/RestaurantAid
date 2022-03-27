@@ -4,8 +4,4 @@ export class Order {
 		this.meal = meal;
 		this.orderedAt = new Date();
 	}
-
-	get cost() {
-		return this.beverage.price.add(this.meal.price);
-	}
-}
+ }

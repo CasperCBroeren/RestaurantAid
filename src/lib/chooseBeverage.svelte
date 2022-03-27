@@ -1,5 +1,6 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
+import Price from './Price.svelte';
 
 	const dispatch = createEventDispatcher();
 	export let beverages = [];
@@ -17,7 +18,7 @@
 		<div class="card-body">
 			<h2 class="card-title">{beverage.name}</h2>
 			<p>{beverage.description}</p>
-			<div class="stat-title">Price {beverage.price.formatted}</div>
+			<div class="stat-title">Price <Price value={beverage.price} /></div>
 			<div class="card-actions justify-end">
 				<button class="btn btn-primary" on:click={() => selectBeverage(beverage)}>Select</button>
 			</div>
