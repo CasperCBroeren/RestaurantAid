@@ -11,7 +11,7 @@
 <div class="navbar bg-base-100 rounded">
 	<div class="flex-1">
 		<lottie-player
-			src="toplogo.json"
+			src="https://assets3.lottiefiles.com/private_files/lf30_y0m027fl.json"
 			background="transparent"
 			speed="1"
 			class="lg:w-16 hidden lg:block"
