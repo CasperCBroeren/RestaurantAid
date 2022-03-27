@@ -1,6 +1,6 @@
 <script>
 	import '../assets/app.css';
-	import { beverages, meals } from '../assets/data';
+	import { beverages, meals } from '../stores/item.store';
 	import Progress from '../lib/progress.svelte';
 	import ChooseBeverage from '../lib/chooseBeverage.svelte';
 	import ChooseMeal from '../lib/chooseMeal.svelte';
@@ -42,12 +42,12 @@
 
 	{#if currentStep === 1}
 		<div class="stepbox stepbox-grid" in:fade={stepTransition}>
-			<ChooseBeverage {beverages} on:beverageSelected={setBeverage} />
+			<ChooseBeverage beverages={$beverages} on:beverageSelected={setBeverage} />
 		</div>
 	{/if}
 	{#if currentStep === 2}
 		<div class="stepbox stepbox-grid" in:fade={stepTransition}>
-			<ChooseMeal {meals} beverage={selectedBeverage} on:mealSelected={setMeal} />
+			<ChooseMeal meals={$meals} beverage={selectedBeverage} on:mealSelected={setMeal} />
 		</div>
 	{/if}
 	{#if currentStep === 3}

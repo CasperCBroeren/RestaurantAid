@@ -17,7 +17,7 @@
 		<div class="card-body">
 			<h2 class="card-title">{beverage.name}</h2>
 			<p>{beverage.description}</p>
-			<div class="stat-title">Price {beverage.price.formated}</div>
+			<div class="stat-title">Price {beverage.price.formatted}</div>
 			<div class="card-actions justify-end">
 				<button class="btn btn-primary" on:click={() => selectBeverage(beverage)}>Select</button>
 			</div>

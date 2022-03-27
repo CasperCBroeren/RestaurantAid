@@ -14,13 +14,13 @@
 	<div>
 		<div class="stat-title">Beverage</div>
 		<div class="text-2xl font-bold ">{beverage.name}</div>
-		<div class="stat-desc">Price {beverage.price.formated}</div>
+		<div class="stat-desc">Price {beverage.price.formatted}</div>
 	</div>
 	<div class="divider">and</div>
 	<div>
 		<div class="stat-title">Meal</div>
 		<div class="text-2xl font-bold">{meal.name}</div>
-		<div class="stat-desc">Price {meal.price.formated}</div>
+		<div class="stat-desc">Price {meal.price.formatted}</div>
 	</div>
 </div>
 
@@ -29,7 +29,7 @@
 	<p class="">Your meal order is almost complete. Please review the order and press purchase</p>
 	<div class="text-xl mt-4">
 		Total:
-		{meal.price.add(beverage.price).formated}
+		{meal.price.add(beverage.price).formatted}
 
 		<button on:click={order} class="btn btn-primary btm-lg mt-4 lg:ml-4">Purchase</button>
 	</div>

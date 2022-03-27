@@ -22,7 +22,7 @@
 						<th>{order.beverage.name}</th>
 						<td>{order.meal.name}</td>
 						<td>{moment(order.orderedAt).format('MMMM Do YYYY, HH:mm')}</td>
-						<td>{order.cost.formated}</td>
+						<td>{order.cost.formatted}</td>
 					</tr>
 				{/each}
 			</tbody>

@@ -9,7 +9,7 @@
 </script>
 
 <lottie-player
-	src="https://assets8.lottiefiles.com/packages/lf20_Eh4ZBX.json"
+	src="finished.json"
 	background="transparent"
 	speed="1"
 	class="2xl:w-1/3 lg:p-10"

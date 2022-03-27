@@ -3,7 +3,7 @@ export class Price {
 		this.value = value;
 	}
 
-	get formated() {
+	get formatted() {
 		return `€ ${this.value.toFixed(2)}`;
 	}
 

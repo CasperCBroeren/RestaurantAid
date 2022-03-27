@@ -11,13 +11,13 @@
 <div class="navbar bg-base-100 rounded">
 	<div class="flex-1">
 		<lottie-player
-			src="https://assets5.lottiefiles.com/packages/lf20_cbr1qxxq.json"
+			src="toplogo.json"
 			background="transparent"
 			speed="1"
-			class="w-16"
+			class="lg:w-16 hidden lg:block"
 			autoplay
 		/>
-		<h1 class="normal-case text-xl">Restaurant aid 2.01</h1>
+		<h1 class="normal-case lg:text-2xl">Restaurant aid 2.01</h1>
 	</div>
 	<ul class="flex-none">
 		<ul class="menu menu-horizontal p-0">
